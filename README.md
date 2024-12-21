@@ -1,3 +1,16 @@
+## Instrução de Execução do Projeto
+- Executar o Docker
+Para executar o Docker utilizar o seguinte comando :
+```docker compose up -d```
+Após isso, executar o seguinte comando para entrar no container PHP :
+```docker compose exec -it -u user php bash```
+Rodar o seguinte comando no container PHP :
+```composer install```
+Rodar comando de migração das tabelas no container PHP :
+```php artisan migrate```
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
