@@ -2,16 +2,24 @@
 Executar o Docker
 
 Para executar o Docker utilizar o seguinte comando:
-```docker compose up -d```
+```
+docker compose up -d
+```
 
 Após isso, executar o seguinte comando para entrar no container PHP:
-```docker compose exec -it -u user php bash```
+```
+docker compose exec -it -u user php bash
+```
 
 Rodar o seguinte comando no container PHP:
-```composer install```
+```
+composer install
+```
 
 Rodar comando de migração das tabelas no container PHP:
-```php artisan migrate```
+```
+php artisan migrate
+```
 
 
 
