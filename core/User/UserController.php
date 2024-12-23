@@ -59,7 +59,7 @@ class UserController extends Controller
             password: $data['password'],
         );
 
-        return $case->execute($request->id, $payload);
+        return $case->execute($request->userID, $payload);
     }
 
     public function rankingUser(Request $request, RankingUser $case)
