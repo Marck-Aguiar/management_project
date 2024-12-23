@@ -60,6 +60,7 @@ php artisan migrate
 + Certifique-se de que as variáveis de ambiente do banco de dados estão configuradas corretamente no .env antes de executar este comando.
 
 ## Descrição dos Endpoints utilizados no projeto
++ Os usos de endpoits foram exemplificados utilizando [Postman](https://www.postman.com).
 ### Módulo de Usuário:
 + /user : Este endpoint é utilizado para criação de usuário.
 <p align="center"><a target="_blank"><img src="./assets/CreateUser.png" width="1000" height="500" alt="Laravel Logo"></a></p>
