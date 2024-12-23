@@ -80,6 +80,13 @@ php artisan migrate
 
 ### Para os testes da API foi utilizado o prefixo app/api configurado no arquivo /bootstrap/app.php
 
+### Conexão com API Externa
+Utilizando a API [API Random User](https://randomuser.me).
++ Para fazer a conexão com a API externa foi usado um seeder para criar usuário. Executando o seeder: database/seeders/PopulateRandomUser.php
+```
+art db:seed --class=PopulateRandomUser
+```
+
 ### Testes Automatizados 
 Para rodar os testes automatizado dos casos de uso executar o comando dentro do container PHP:
 ```
