@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Core\DTOs\UserDTO;
+use Core\User\DTOs\UserDTO;
 use Core\User\Cases\CreateUser;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Testing\WithFaker;
