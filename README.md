@@ -63,20 +63,32 @@ php artisan migrate
 + Os usos de endpoits foram exemplificados utilizando [Postman](https://www.postman.com).
 ### Módulo de Usuário:
 + /user : Este endpoint é utilizado para criação de usuário.
+
 <p align="center"><a target="_blank"><img src="./assets/CreateUser.png" width="1000" height="500" alt="Laravel Logo"></a></p>
+
 + /user/{userID} : Este endpoint é utilizado para atualizar o usuário cujo id é citado no {userID}.
+
 <p align="center"><a target="_blank"><img src="./assets/UpdateUser.png" width="1000" height="500" alt="Laravel Logo"></a></p>
+
 + /user/ranking_user : Este endpoint retorna uma paginação do ranking de 10 usuários com pontos acumulados.
+
 <p align="center"><a target="_blank"><img src="./assets/RankingUsers.png" width="1000" height="500" alt="Laravel Logo"></a></p>
+
 + /user/paginate_user : Este endpoint retorna todos os usuários do sistema por página.
+
 <p align="center"><a target="_blank"><img src="./assets/PaginateUser.png" width="1000" height="500" alt="Laravel Logo"></a></p>
 
 ### Módulo de Atividade:
 + /activity : Este endpoint é utilizado para criação de atividade associada a um usuário.
+
 <p align="center"><a target="_blank"><img src="./assets/CreateActivity.png" width="1000" height="500" alt="Laravel Logo"></a></p>
+
 + /activity/points/{userID} : Este endpoint é utilizado para listar o total de pontuação de um usuário específico cujo id é citado no {userID}.
+
 <p align="center"><a target="_blank"><img src="./assets/GetTotalPoints.png" width="1000" height="500" alt="Laravel Logo"></a></p>
+
 + /activity/pagination_user_activities/{userID} : Este endpoint é utilizado para fazer a paginação das atividades de um usuário específico.
+
 <p align="center"><a target="_blank"><img src="./assets/PaginateUserActivities.png" width="1000" height="500" alt="Laravel Logo"></a></p>
 
 ### Para os testes da API foi utilizado o prefixo app/api configurado no arquivo /bootstrap/app.php
