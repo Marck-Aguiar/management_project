@@ -19,7 +19,7 @@ class DeleteActivity
         $discipline = Discipline::find($activity->discipline_id);
 
         if (!$discipline || $discipline->teacher_id !== $userID) {
-            throw new \Exception("Unauthorized: You can only delete activities in your own discipline.");
+            throw new \Exception("Não autorizado: Você só pode excluir atividades da sua disciplina.");
         }
 
         $activity->delete();
