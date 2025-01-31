@@ -6,7 +6,6 @@ use Tests\TestCase;
 use Core\User\Models\User;
 use Core\Activity\DTOs\ActivityDTO;
 use Core\Activity\Cases\CreateActivity;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CreateActivityTest extends TestCase
@@ -20,9 +19,11 @@ class CreateActivityTest extends TestCase
         User::factory()->create();
 
         $payload = new ActivityDTO(
+            title: "Atividade Inovadora",
             description: "Ideia Inovadora",
             points: 20,
-            userID: 1
+            userID: 1,
+            disciplineID: 2
         );
 
         $case->execute($payload);

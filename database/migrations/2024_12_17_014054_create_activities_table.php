@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
             $table->string('description');
             $table->integer('points');
+            $table->integer('max_points');
             $table->foreignId('user_id')->constrained('users');
+            $table->enum('status', ['pendente', 'avaliada']);
+            $table->foreignId('discipline_id')->constrained('disciplines')->onDelete('cascade');
             $table->timestamps();
         });
     }

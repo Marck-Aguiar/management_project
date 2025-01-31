@@ -2,10 +2,13 @@
 
 namespace Core\Activity\DTOs;
 
-class ActivityDTO {
+class ActivityDTO
+{
     function __construct(
-    public string $description,
-    public int $points,
-    public int $userID
+        public string $title,
+        public string $description,
+        public int $points,
+        public int $userID,
+        public int $disciplineID
     ) {}
 }
