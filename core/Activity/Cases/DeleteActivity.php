@@ -10,22 +10,18 @@ class DeleteActivity
 {
     public function execute(int $activityID, int $userID)
     {
-        // Find the activity by ID
         $activity = Activity::find($activityID);
 
-        // Check if the activity exists
         if (!$activity) {
             throw new \Exception("Activity not found.");
         }
 
-        // Ensure the user is the teacher responsible for the discipline of the activity
         $discipline = Discipline::find($activity->discipline_id);
 
         if (!$discipline || $discipline->teacher_id !== $userID) {
             throw new \Exception("Unauthorized: You can only delete activities in your own discipline.");
         }
 
-        // Delete the activity
         $activity->delete();
 
         return ['activity_deleted' => true];
